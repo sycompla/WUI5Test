@@ -1,0 +1,31 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="sources.Controllers.ListJson">
+    <Shell>
+        <App class="sapUiResponsiveMargin" width="auto"  xmlns:f="sap.ui.layout.form">
+            <pages>
+                <Page title="test">
+                    <content>
+                        <List xmlns="sap.m" items="{/TileCollection}">
+                            <items>
+                                <CustomListItem xmlns="sap.m">
+                                    <content>
+                                        <VBox  >
+                                            <Link text="{header}"/>
+                                            <Label text="{nodeName}"/>
+                                        </VBox>
+                                        <List xmlns="sap.m" items="{microchart}" >
+                                            <items>
+                                                <StandardListItem
+                                                        title="{title}"
+                                                        description="{value}"></StandardListItem>
+                                            </items>
+                                        </List>
+                                    </content> <!-- sap.ui.core.Control -->
+                                </CustomListItem>
+                            </items> <!-- sap.m.ListItemBase -->
+                        </List>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

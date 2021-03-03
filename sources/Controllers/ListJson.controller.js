@@ -1,6 +1,6 @@
 sap.ui
     .controller(
-        "sources.Controllers.GenericTiles",
+        "sources.Controllers.ListJson",
         {
 
             onInit : function () {
@@ -11,10 +11,4 @@ sap.ui
                 this.getView().setModel(oMydata);
             },
 
-            press : function (evt) {/*
-                console.log(evt.getParameters());
-                console.log(evt.getSource());*/
-                app.to("idListJson", "slide");
-
-            }
         });
