@@ -3,12 +3,12 @@
     <Page
             showHeader="false"
             enableScrolling="false" >
-        <m:GenericTile header="Comparative Annual Totals"
+        <m:GenericTile
                        subheader="By Region" frameType="OneByOne" press="press">
             <m:tileContent>
-                <m:TileContent footer="Compare across regions" unit="EUR">
+                <m:TileContent>
                     <m:content>
-                        <suite:ComparisonMicroChart scale="M" size="Responsive" data="{path: '/microchart'}">
+                        <suite:ComparisonMicroChart shrinkable="true" size="Responsive" data="{path: '/microchart'}">
                             <suite:data>
                                 <suite:ComparisonMicroChartData title="{title}"
                                                           value="{value}" color="{color}" />
