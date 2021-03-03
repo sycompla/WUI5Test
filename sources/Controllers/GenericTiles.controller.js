@@ -10,7 +10,10 @@ sap.ui
 
                 this.getView().setModel(oMydata);
             },
-            /*
-                        onTilePress : function(evt) {
-                            app.to("idTile", "slide");},*/
+
+            press : function (evt) {
+                console.log(evt.getParameters());
+                console.log(evt.getSource());
+
+            }
         });

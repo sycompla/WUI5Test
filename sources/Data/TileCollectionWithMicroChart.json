@@ -5,7 +5,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 5,
           "color": "Critical"
         },{
@@ -27,7 +27,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 25,
           "color": "Critical"
         },{
@@ -49,7 +49,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 8,
           "color": "Critical"
         },{
@@ -71,7 +71,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 120,
           "color": "Critical"
         },{
@@ -93,7 +93,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 2,
           "color": "Critical"
         },{
@@ -115,7 +115,7 @@
       "nodeName": "node name",
       "microchart" : [
         {
-          "title" : "waiting for response",
+          "title" : "waiting",
           "value": 75,
           "color": "Critical"
         },{
