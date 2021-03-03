@@ -3,22 +3,21 @@
     <Page
             showHeader="false"
             enableScrolling="false" >
-        <m:GenericTile header="Revenue Dynamics"
-                       frameType="OneByOne" press="press">
+        <m:GenericTile header="Comparative Annual Totals"
+                       subheader="By Region" frameType="OneByOne" press="press">
             <m:tileContent>
-                <m:TileContent footer="Standard Mode">
+                <m:TileContent footer="Compare across regions" unit="EUR">
                     <m:content>
                         <suite:ComparisonMicroChart scale="M" size="Responsive">
                             <suite:data>
                                 <suite:ComparisonMicroChartData title="Americas"
-                                                          value="10" color="Good" />
+                                                          value="234" color="Good" />
                                 <suite:ComparisonMicroChartData title="EMEA"
-                                                          value="50" color="Good" />
+                                                          value="97" color="Error" />
                                 <suite:ComparisonMicroChartData title="APAC"
-                                                          value="-20" color="Error" />
+                                                          value="197" color="Critical" />
                             </suite:data>
                         </suite:ComparisonMicroChart>
-
                     </m:content>
                 </m:TileContent>
             </m:tileContent>
