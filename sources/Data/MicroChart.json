@@ -1,0 +1,20 @@
+{
+  "microchart" : [
+    {
+      "title" : "első",
+      "value": "5",
+      "color": "Good"
+    },{
+      "title" : "második",
+      "value": "25",
+      "color": "Good"
+    },{
+      "title" : "harmadik",
+      "value": "11",
+      "color": "Good"
+    },{
+      "title": "negyedik",
+      "value": "75",
+      "color": "Error"
+    }]
+}

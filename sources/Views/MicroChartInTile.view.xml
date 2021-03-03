@@ -8,14 +8,16 @@
             <m:tileContent>
                 <m:TileContent footer="Compare across regions" unit="EUR">
                     <m:content>
-                        <suite:ComparisonMicroChart scale="M" size="Responsive">
+                        <suite:ComparisonMicroChart scale="M" size="Responsive" data="{path: '/microchart'}">
                             <suite:data>
-                                <suite:ComparisonMicroChartData title="Americas"
-                                                          value="234" color="Good" />
+                                <suite:ComparisonMicroChartData title="{title}"
+                                                          value="{value}" color="{color}" />
+                                <!--
                                 <suite:ComparisonMicroChartData title="EMEA"
                                                           value="97" color="Error" />
                                 <suite:ComparisonMicroChartData title="APAC"
                                                           value="197" color="Critical" />
+                                -->
                             </suite:data>
                         </suite:ComparisonMicroChart>
                     </m:content>
