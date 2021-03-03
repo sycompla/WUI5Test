@@ -1,20 +1,20 @@
 {
   "microchart" : [
     {
-      "title" : "első",
+      "title" : "Waiting for response",
       "value": 5,
-      "color": "Good"
-    },{
-      "title" : "második",
-      "value": 25,
-      "color": "Good"
-    },{
-      "title" : "harmadik",
-      "value": 11,
-      "color": "Error"
-    },{
-      "title": "negyedik",
-      "value": 75,
       "color": "Critical"
+    },{
+      "title" : "Completed",
+      "value": 25,
+      "color": "#00008B"
+    },{
+      "title" : "Succsess",
+      "value": 11,
+      "color": "Good"
+    },{
+      "title": "Failed",
+      "value": 75,
+      "color": "Error"
     }]
 }
