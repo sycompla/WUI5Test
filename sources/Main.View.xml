@@ -1,0 +1,20 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="sources.Main">
+    <Shell>
+        <App class="sapUiResponsiveMargin" width="auto"  xmlns:f="sap.ui.layout.form">
+            <pages>
+                <Page title="test">
+                    <content>
+                        <List id="companyList" items="{/companies}">
+                        <items>
+                            <StandardListItem
+                                    title="{name}"
+                                    description="{city}"
+                            />
+                        </items>
+                    </List>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
