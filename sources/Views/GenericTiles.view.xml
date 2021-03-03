@@ -6,9 +6,9 @@
         <l:HorizontalLayout
             id="HLayout"
             content="{/TileCollection}">
-            <m:GenericTile header="{header}" frameType="OneByOne" press="press">
+            <m:GenericTile header="{header}" subheader="{nodeName}" frameType="OneByOne" press="press">
                 <m:tileContent>
-                    <m:TileContent footer="node name">
+                    <m:TileContent>
                         <m:content>
                             <suite:ComparisonMicroChart shrinkable="true" size="Responsive" data="{path: 'microchart', templateShareable:false}">
                                 <suite:data>

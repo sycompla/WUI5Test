@@ -1,7 +1,8 @@
 {
   "TileCollection": [
     {
-      "header": "hint",
+      "header": 5,
+      "nodeName": "node name",
       "microchart" : [
         {
           "title" : "waiting for response",
@@ -22,7 +23,8 @@
         }]
     },
     {
-      "header": "inbox",
+      "header": 76,
+      "nodeName": "node name",
       "microchart" : [
         {
           "title" : "waiting for response",
@@ -39,6 +41,94 @@
         },{
           "title": "failed",
           "value": 9,
+          "color": "Error"
+        }]
+    },
+    {
+      "header": 45,
+      "nodeName": "node name",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 8,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 56,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 78,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 8,
+          "color": "Error"
+        }]
+    },
+    {
+      "header": 6,
+      "nodeName": "node name",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 120,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 2,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 101,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 15,
+          "color": "Error"
+        }]
+    },
+    {
+      "header": 53,
+      "nodeName": "node name",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 2,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 11,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 16,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 10,
+          "color": "Error"
+        }]
+    },
+    {
+      "header": 23,
+      "nodeName": "node name",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 75,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 27,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 18,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 99,
           "color": "Error"
         }]
     }
