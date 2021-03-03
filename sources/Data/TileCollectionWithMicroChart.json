@@ -2,7 +2,7 @@
   "TileCollection": [
     {
       "header": 5,
-      "nodeName": "node name",
+      "nodeName": "első node neve",
       "microchart" : [
         {
           "title" : "waiting",
@@ -24,7 +24,7 @@
     },
     {
       "header": 76,
-      "nodeName": "node name",
+      "nodeName": "második node neve",
       "microchart" : [
         {
           "title" : "waiting",
@@ -46,7 +46,7 @@
     },
     {
       "header": 45,
-      "nodeName": "node name",
+      "nodeName": "harmadik node neve",
       "microchart" : [
         {
           "title" : "waiting",
@@ -68,7 +68,7 @@
     },
     {
       "header": 6,
-      "nodeName": "node name",
+      "nodeName": "negyedik node neve",
       "microchart" : [
         {
           "title" : "waiting",
@@ -90,7 +90,7 @@
     },
     {
       "header": 53,
-      "nodeName": "node name",
+      "nodeName": "ötödik node neve",
       "microchart" : [
         {
           "title" : "waiting",
@@ -112,7 +112,7 @@
     },
     {
       "header": 23,
-      "nodeName": "node name",
+      "nodeName": "hatodik node neve",
       "microchart" : [
         {
           "title" : "waiting",

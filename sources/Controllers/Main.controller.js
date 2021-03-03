@@ -20,4 +20,8 @@ sap.ui
             onGenericTilesPress : function (evt) {
                 app.to("idGenericTiles", "slide");
             },
+
+            onMultiComboPress: function (evt) {
+                app.to("idMultiCombo", "slide");
+            }
         });

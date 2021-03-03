@@ -25,6 +25,10 @@
                             id="testButton3"
                             text="Micro Chart In Generic Tiles page"
                             press=".onGenericTilesPress"/>
+                    <Button
+                            id="testButton4"
+                            text="MultiCombo page"
+                            press=".onMultiComboPress"/>
                 </Page>
             </pages>
         </App>
