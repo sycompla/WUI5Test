@@ -20,6 +20,8 @@
         var app = new sap.m.App({initialPage:"idMain"});
         var pageMain = sap.ui.view({id:"idMain", viewName:"sources.Views.Main", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMain);
+        var pageTile = sap.ui.view({id:"idTile", viewName:"sources.Views.Tile", type:sap.ui.core.mvc.ViewType.XML});
+        app.addPage(pageTile);
         app.placeAt("content");
 
     </script>

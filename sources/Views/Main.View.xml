@@ -13,6 +13,10 @@
                         </items>
                     </List>
                     </content>
+                    <Button
+                            id="testButton"
+                            text="Tile page"
+                            press=".onTilePress"/>
                 </Page>
             </pages>
         </App>
