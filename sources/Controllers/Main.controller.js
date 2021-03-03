@@ -1,11 +1,11 @@
 sap.ui
     .controller(
-        "sources.Main",
+        "sources.Controllers.Main",
         {
 
             onInit : function () {
                 var oMydata = new sap.ui.model.json.JSONModel();
-                oMydata.loadData("sources/data.json");
+                oMydata.loadData("sources/Data/data.json");
                 console.log(JSON.stringify(oMydata.getData()));
 
                 this.getView().setModel(oMydata);

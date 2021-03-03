@@ -1,4 +1,4 @@
-<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="sources.Main">
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="sources.Controllers.Main">
     <Shell>
         <App class="sapUiResponsiveMargin" width="auto"  xmlns:f="sap.ui.layout.form">
             <pages>
