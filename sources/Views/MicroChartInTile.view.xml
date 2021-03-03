@@ -3,10 +3,9 @@
     <Page
             showHeader="false"
             enableScrolling="false" >
-        <m:GenericTile
-                       subheader="By Region" frameType="OneByOne" press="press">
+        <m:GenericTile header="6" frameType="OneByOne" press="press">
             <m:tileContent>
-                <m:TileContent>
+                <m:TileContent footer="node name">
                     <m:content>
                         <suite:ComparisonMicroChart shrinkable="true" size="Responsive" data="{path: '/microchart'}">
                             <suite:data>
