@@ -9,6 +9,32 @@ sap.ui
                 console.log(JSON.stringify(oMydata.getData()));
 
                 this.getView().setModel(oMydata);
+
+                console.log(
+                    Enumerable.from(
+                        [
+                                {
+                                    "title" : "Waiting for response",
+                                    "value": 5,
+                                    "color": "Critical"
+                                },{
+                                    "title" : "Completed",
+                                    "value": 25,
+                                    "color": "#00008B"
+                                },{
+                                    "title" : "Succsess",
+                                    "value": 11,
+                                    "color": "Good"
+                                },{
+                                    "title": "Failed",
+                                    "value": 75,
+                                    "color": "Error"
+                                }
+                        ]
+                    )
+                    .select(function (egyCsempe) { return egyCsempe})
+                        .where(function (egyCsempe) { return egyCsempe.title == "Failed";}).toArray()
+                );
             },
 
             onTilePress : function(evt) {
