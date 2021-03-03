@@ -1,0 +1,27 @@
+<mvc:View controllerName="sources.Controllers.MicroChartInTile"
+          xmlns="sap.m" xmlns:suite="sap.suite.ui.microchart" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Page
+            showHeader="false"
+            enableScrolling="false" >
+        <m:GenericTile header="Revenue Dynamics"
+                       frameType="OneByOne" press="press">
+            <m:tileContent>
+                <m:TileContent footer="Standard Mode">
+                    <m:content>
+                        <suite:ComparisonMicroChart scale="M" size="Responsive">
+                            <suite:data>
+                                <suite:ComparisonMicroChartData title="Americas"
+                                                          value="10" color="Good" />
+                                <suite:ComparisonMicroChartData title="EMEA"
+                                                          value="50" color="Good" />
+                                <suite:ComparisonMicroChartData title="APAC"
+                                                          value="-20" color="Error" />
+                            </suite:data>
+                        </suite:ComparisonMicroChart>
+
+                    </m:content>
+                </m:TileContent>
+            </m:tileContent>
+        </m:GenericTile>
+    </Page>
+</mvc:View>

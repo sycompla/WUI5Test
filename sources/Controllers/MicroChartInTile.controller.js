@@ -1,8 +1,8 @@
 sap.ui
     .controller(
-        "sources.Controllers.Main",
+        "sources.Controllers.MicroChartInTile",
         {
-
+/*
             onInit : function () {
                 var oMydata = new sap.ui.model.json.JSONModel();
                 oMydata.loadData("sources/Data/data.json");
@@ -12,9 +12,5 @@ sap.ui
             },
 
             onTilePress : function(evt) {
-                app.to("idTile", "slide");},
-
-            onMicroChartInTilePress : function (evt) {
-                app.to("idMicroChartInTile", "slide");
-            },
+                app.to("idTile", "slide");},*/
         });
