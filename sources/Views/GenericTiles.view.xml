@@ -1,0 +1,31 @@
+<mvc:View controllerName="sources.Controllers.GenericTiles" xmlns:l="sap.ui.layout"
+          xmlns="sap.m" xmlns:suite="sap.suite.ui.microchart" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Page
+            showHeader="false"
+            enableScrolling="false" >
+        <l:HorizontalLayout
+            id="HLayout"
+            content="{/TileCollection}">
+            <m:GenericTile header="{header}" frameType="OneByOne" press="press">
+                <m:tileContent>
+                    <m:TileContent footer="node name">
+                        <m:content>
+                            <suite:ComparisonMicroChart shrinkable="true" size="Responsive" data="{path: 'microchart', templateShareable:false}">
+                                <suite:data>
+                                    <suite:ComparisonMicroChartData title="{title}"
+                                                                    value="{value}" color="{color}" />
+                                    <!--
+                                    <suite:ComparisonMicroChartData title="EMEA"
+                                                              value="97" color="Error" />
+                                    <suite:ComparisonMicroChartData title="APAC"
+                                                              value="197" color="Critical" />
+                                    -->
+                                </suite:data>
+                            </suite:ComparisonMicroChart>
+                        </m:content>
+                    </m:TileContent>
+                </m:tileContent>
+            </m:GenericTile>
+        </l:HorizontalLayout>
+    </Page>
+</mvc:View>

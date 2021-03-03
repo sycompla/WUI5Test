@@ -21,6 +21,10 @@
                             id="testButton2"
                             text="Micro Chart In Tile page"
                             press=".onMicroChartInTilePress"/>
+                    <Button
+                            id="testButton3"
+                            text="Micro Chart In Generic Tiles page"
+                            press=".onGenericTilesPress"/>
                 </Page>
             </pages>
         </App>

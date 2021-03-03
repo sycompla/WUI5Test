@@ -17,4 +17,7 @@ sap.ui
             onMicroChartInTilePress : function (evt) {
                 app.to("idMicroChartInTile", "slide");
             },
+            onGenericTilesPress : function (evt) {
+                app.to("idGenericTiles", "slide");
+            },
         });

@@ -1,0 +1,46 @@
+{
+  "TileCollection": [
+    {
+      "header": "hint",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 5,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 25,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 11,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 75,
+          "color": "Error"
+        }]
+    },
+    {
+      "header": "inbox",
+      "microchart" : [
+        {
+          "title" : "waiting for response",
+          "value": 25,
+          "color": "Critical"
+        },{
+          "title" : "completed",
+          "value": 2,
+          "color": "#00008B"
+        },{
+          "title" : "succsess",
+          "value": 11,
+          "color": "Good"
+        },{
+          "title": "failed",
+          "value": 9,
+          "color": "Error"
+        }]
+    }
+  ]
+}
