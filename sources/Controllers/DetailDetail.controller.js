@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (JSONModel, Controller) {
 	"use strict";
 
-	return Controller.extend("sap.f.FlexibleColumnLayoutWithOneColumnStart.controller.DetailDetail", {
+	return Controller.extend("sources.Controllers.DetailDetail", {
 		onInit: function () {
 			var oExitButton = this.getView().byId("exitFullScreenBtn"),
 				oEnterButton = this.getView().byId("enterFullScreenBtn");
