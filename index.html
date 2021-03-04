@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <title>Vendor form</title>
+    <title>Test</title>
     <script
             id="sap-ui-bootstrap"
             src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
@@ -19,6 +19,7 @@
     <script>
 
         sap.ui.localResources("sources");
+        <!--
         var app = new sap.m.App({initialPage:"idMain"});
         var pageMain = sap.ui.view({id:"idMain", viewName:"sources.Views.Main", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMain);
@@ -32,6 +33,7 @@
         app.addPage(pageListJson);
         var pageMultiCombo = sap.ui.view({id:"idMultiCombo", viewName:"sources.Views.MultiCombo", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMultiCombo);
+        -->
         var pageMaster = sap.ui.view({id:"idMaster", viewName:"sources.Views.Master", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMaster);
         app.placeAt("content");
