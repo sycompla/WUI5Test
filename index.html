@@ -33,9 +33,12 @@
         app.addPage(pageListJson);
         var pageMultiCombo = sap.ui.view({id:"idMultiCombo", viewName:"sources.Views.MultiCombo", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMultiCombo);
-        -->
+-->
         var pageMaster = sap.ui.view({id:"idMaster", viewName:"sources.Views.Master", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageMaster);
+
+        var pageDynamicPage = sap.ui.view({id:"idDynamicPage", viewName:"sources.Views.DynamicPage", type:sap.ui.core.mvc.ViewType.XML});
+        app.addPage(pageDynamicPage);
         app.placeAt("content");
 
     </script>

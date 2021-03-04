@@ -28,5 +28,8 @@ sap.ui
 
             onMasterPress: function (evt) {
                 app.to("idMaster", "slide");
+            },
+            onDynamicPagePress: function (evt) {
+                app.to("idDynamicPage", "slide");
             }
         });

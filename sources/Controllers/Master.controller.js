@@ -9,9 +9,12 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sources.Controllers.Master", {
-		onInit: function () {
-			this.oRouter = this.getOwnerComponent().getRouter();
+		onInit: async function () {
+			this.oRouter = await this.getOwnerComponent().getRouter();
 			this._bDescendingSort = false;
+			var oMydata = new sap.ui.model.json.JSONModel();
+			oMydata.loadData("sources/Data/products.json");
+			this.getView().setModel(oMydata);
 		},
 		onListItemPress: function (oEvent) {
 			var oNextUIState = this.getOwnerComponent().getHelper().getNextUIState(1),

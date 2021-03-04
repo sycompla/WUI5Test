@@ -33,6 +33,10 @@
                             id="testButton5"
                             text="Dynamic layout"
                             press=".onMasterPress"/>
+                    <Button
+                            id="testButton6"
+                            text="Dynamic page"
+                            press=".onDynamicPagePress"/>
                 </Page>
             </pages>
         </App>
