@@ -12,7 +12,7 @@ sap.ui.define([
 
         onInit: function () {
             var oMydata = new sap.ui.model.json.JSONModel();
-            oMydata.loadData("sources/Data/cardManifest.json");
+            oMydata.loadData("sources/Data/cardManifests.json");
             console.log(JSON.stringify(oMydata.getData()));
             var oGrid = this.byId("grid1");
 
