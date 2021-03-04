@@ -38,9 +38,11 @@ sap.ui
                     }
                 }
 
+                var TileCollection
+
                 messageText += "]";
 
-                console.log(
+                var result =
                     Enumerable.from(
                         [
                             {
@@ -178,12 +180,19 @@ sap.ui
                         ]
                     )
                         .select(function (egyCsempe) { return egyCsempe})
-                        .where(function (egyCsempe) { return egyCsempe.nodeName == nodeName;}).toArray()
-                );
+                        .where(function (egyCsempe) { return egyCsempe.nodeName == nodeName;}).toArray();
 
-                console.log(messageText, {
-                    width: "auto"
-                });
+                function collectionObject(TileCollection) {
+                    this.TileCollection = TileCollection;
+                }
+
+                var objectResult = new collectionObject(result);
+
+                var oMydata = new sap.ui.model.json.JSONModel();
+                oMydata.setData(objectResult);
+
+                this.getView().byId("HLayout").setModel(oMydata);
+
             }
 
         });
