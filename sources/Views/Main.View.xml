@@ -37,6 +37,10 @@
                             id="testButton6"
                             text="Dynamic page"
                             press=".onDynamicPagePress"/>
+                    <Button
+                            id="testButton7"
+                            text="Analytical table on dynamic page"
+                            press=".onAnalyticalTablePress"/>
                 </Page>
             </pages>
         </App>

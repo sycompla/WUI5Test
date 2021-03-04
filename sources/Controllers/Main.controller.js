@@ -31,5 +31,8 @@ sap.ui
             },
             onDynamicPagePress: function (evt) {
                 app.to("idDynamicPage", "slide");
+            },
+            onAnalyticalTablePress: function (evt) {
+                app.to("idAnalyticalTable", "slide");
             }
         });
