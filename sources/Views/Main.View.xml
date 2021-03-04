@@ -29,6 +29,10 @@
                             id="testButton4"
                             text="MultiCombo page"
                             press=".onMultiComboPress"/>
+                    <Button
+                            id="testButton5"
+                            text="Dynamic layout"
+                            press=".onMasterPress"/>
                 </Page>
             </pages>
         </App>
