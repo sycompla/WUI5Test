@@ -11,7 +11,7 @@ sap.ui
                 this.getView().setModel(oMydata);
 
             },
-
+/*
             onTilePress : function(evt) {
                 app.to("idTile", "slide");},
 
@@ -34,5 +34,8 @@ sap.ui
             },
             onAnalyticalTablePress: function (evt) {
                 app.to("idAnalyticalTable", "slide");
-            }
+            },*/
+            onGridContainerPress: function (evt) {
+                app.to("idGridContainer", "slide");
+            },
         });

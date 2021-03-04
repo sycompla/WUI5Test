@@ -12,7 +12,7 @@
                             />
                         </items>
                     </List>
-                    </content>
+                    </content><!--
                     <Button
                             id="testButton"
                             text="Tile page"
@@ -40,7 +40,11 @@
                     <Button
                             id="testButton7"
                             text="Analytical table on dynamic page"
-                            press=".onAnalyticalTablePress"/>
+                            press=".onAnalyticalTablePress"/>-->
+                    <Button
+                            id="testButton8"
+                            text="Grid Container - Drag and Drop"
+                            press=".onGridContainerPress"/>
                 </Page>
             </pages>
         </App>

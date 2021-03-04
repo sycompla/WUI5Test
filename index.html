@@ -15,6 +15,7 @@
     </script>
 
     <script src="./js/linq.js"></script>
+    <script src="./js/RevealGrid.js"></script>
 
     <script>
 
@@ -39,9 +40,13 @@
 
         var pageDynamicPage = sap.ui.view({id:"idDynamicPage", viewName:"sources.Views.DynamicPage", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageDynamicPage);
-        -->
+
         var pageAnalyticalTable = sap.ui.view({id:"idAnalyticalTable", viewName:"sources.Views.AnalyticalTable", type:sap.ui.core.mvc.ViewType.XML});
         app.addPage(pageAnalyticalTable);
+        -->
+        var pageGridContainer = sap.ui.view({id:"idGridContainer", viewName:"sources.Views.GridContainer", type:sap.ui.core.mvc.ViewType.XML});
+        app.addPage(pageGridContainer);
+
         app.placeAt("content");
 
     </script>
