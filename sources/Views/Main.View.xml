@@ -24,11 +24,11 @@
                     <Button
                             id="testButton3"
                             text="Micro Chart In Generic Tiles page"
-                            press=".onGenericTilesPress"/>
+                            press=".onGenericTilesPress"/>-->
                     <Button
                             id="testButton4"
                             text="MultiCombo page"
-                            press=".onMultiComboPress"/>
+                            press=".onMultiComboPress"/><!--
                     <Button
                             id="testButton5"
                             text="Dynamic layout"
@@ -40,11 +40,11 @@
                     <Button
                             id="testButton7"
                             text="Analytical table on dynamic page"
-                            press=".onAnalyticalTablePress"/>-->
+                            press=".onAnalyticalTablePress"/>
                     <Button
                             id="testButton8"
                             text="Grid Container - Drag and Drop"
-                            press=".onGridContainerPress"/>
+                            press=".onGridContainerPress"/>-->
                 </Page>
             </pages>
         </App>

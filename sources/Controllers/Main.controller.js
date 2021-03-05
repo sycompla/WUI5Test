@@ -21,11 +21,11 @@ sap.ui
             onGenericTilesPress : function (evt) {
                 app.to("idGenericTiles", "slide");
             },
-
+*/
             onMultiComboPress: function (evt) {
                 app.to("idMultiCombo", "slide");
             },
-
+/*
             onMasterPress: function (evt) {
                 app.to("idMaster", "slide");
             },
@@ -34,8 +34,8 @@ sap.ui
             },
             onAnalyticalTablePress: function (evt) {
                 app.to("idAnalyticalTable", "slide");
-            },*/
+            },
             onGridContainerPress: function (evt) {
                 app.to("idGridContainer", "slide");
-            },
+            },*/
         });
