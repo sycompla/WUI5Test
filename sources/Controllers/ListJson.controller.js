@@ -3,12 +3,25 @@ sap.ui
         "sources.Controllers.ListJson",
         {
 
-            onInit : function () {
-                var oMydata = new sap.ui.model.json.JSONModel();
-                oMydata.loadData("sources/Data/TileCollectionWithMicroChart.json");
-                console.log(JSON.stringify(oMydata.getData()));
+            tileDataSource : {},
 
-                this.getView().setModel(oMydata);
+            model : {},
+
+            onInit : async function () {
+
+                model = new sap.ui.model.json.JSONModel()
+                await model.loadData("sources/Data/TileCollectionWithMicroChart.json");
+
+                this.tileDataSource = JSON.parse(model.getJSON());
+
+                this.loadFromDataSource(this.tileDataSource);
+            },
+
+            loadFromDataSource: function(dataSource) {
+
+                model.setData(dataSource);
+                this.getView().setModel(model);
+
             },
 
         });

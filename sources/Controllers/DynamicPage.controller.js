@@ -10,22 +10,41 @@ sap.ui.define([
     var DynamicPageTitleArea = library.DynamicPageTitleArea;
 
     return Controller.extend("sources.Controllers.DynamicPage", {
-        onInit: function () {
-            var oMydata = new sap.ui.model.json.JSONModel();
-            oMydata.loadData("sources/Data/products.json");
-            this.getView().setModel(oMydata);
+        productsDataSource : {},
+
+        model : {},
+
+        onInit : async function () {
+
+            this.model = new sap.ui.model.json.JSONModel()
+            await model.loadData("sources/Data/products.json");
+
+            this.productsDataSource = JSON.parse(model.getJSON());
+
+            this.loadFromDataSource(this.productsDataSource);
         },
+
+        loadFromDataSource: function(dataSource) {
+
+            model.setData(dataSource);
+            this.getView().setModel(model);
+
+        },
+
         getPage : function() {
             return this.byId("dynamicPageId");
         },
+
         onToggleFooter: function () {
             this.getPage().setShowFooter(!this.getPage().getShowFooter());
         },
+
         toggleAreaPriority: function () {
             var oTitle = this.getPage().getTitle(),
                 sNewPrimaryArea = oTitle.getPrimaryArea() === DynamicPageTitleArea.Begin ? DynamicPageTitleArea.Middle : DynamicPageTitleArea.Begin;
             oTitle.setPrimaryArea(sNewPrimaryArea);
         },
+
         onPressOpenPopover: function (oEvent) {
             var oView = this.getView(),
                 oSourceControl = oEvent.getSource();

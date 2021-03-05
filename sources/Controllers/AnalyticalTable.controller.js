@@ -10,51 +10,27 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("sources.Controllers.AnalyticalTable", {
-        onInit: function () {
-            var oMydata = new sap.ui.model.json.JSONModel();
-            oMydata.loadData("sources/Data/productsNums.json");
-            this.getView().setModel(oMydata);
-        },/*
-        initSampleDataModel : function() {
-            var oModel = new JSONModel();
 
-            var oDateFormat = DateFormat.getDateInstance({source: {pattern: "timestamp"}, pattern: "dd/MM/yyyy"});
+        productsDataSource : {},
 
-            jQuery.ajax(sap.ui.require.toUrl("sap/ui/demo/mock/products.json"), {
-                dataType: "json",
-                success: function (oData) {
-                    var aTemp1 = [];
-                    var aTemp2 = [];
-                    var aSuppliersData = [];
-                    var aCategoryData = [];
-                    for (var i = 0; i < oData.ProductCollection.length; i++) {
-                        var oProduct = oData.ProductCollection[i];
-                        if (oProduct.SupplierName && aTemp1.indexOf(oProduct.SupplierName) < 0) {
-                            aTemp1.push(oProduct.SupplierName);
-                            aSuppliersData.push({Name: oProduct.SupplierName});
-                        }
-                        if (oProduct.Category && aTemp2.indexOf(oProduct.Category) < 0) {
-                            aTemp2.push(oProduct.Category);
-                            aCategoryData.push({Name: oProduct.Category});
-                        }
-                        oProduct.DeliveryDate = (new Date()).getTime() - (i % 10 * 4 * 24 * 60 * 60 * 1000);
-                        oProduct.DeliveryDateStr = oDateFormat.format(new Date(oProduct.DeliveryDate));
-                        oProduct.Heavy = oProduct.WeightMeasure > 1000 ? "true" : "false";
-                        oProduct.Available = oProduct.Status === "Available";
-                    }
+        model : {},
 
-                    oData.Suppliers = aSuppliersData;
-                    oData.Categories = aCategoryData;
-                    oData.headerExpanded = true;
-                    oModel.setData(oData);
-                },
-                error: function () {
-                    Log.error("failed to load json");
-                }
-            });
+        onInit : async function () {
 
-            return oModel;
-        },*/
+            this.model = new sap.ui.model.json.JSONModel()
+            await model.loadData("sources/Data/productsNums.json");
+
+            this.productsDataSource = JSON.parse(model.getJSON());
+
+            this.loadFromDataSource(this.productsDataSource);
+        },
+
+        loadFromDataSource: function(dataSource) {
+
+            model.setData(dataSource);
+            this.getView().setModel(model);
+
+        },
 
         formatAvailableToObjectState : function (bAvailable) {
             return bAvailable ? "Success" : "Error";

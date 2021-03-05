@@ -10,17 +10,18 @@ sap.ui.define([
 
     return Controller.extend("sources.Controllers.GridContainer", {
 
-        onInit: function () {
-            var oMydata = new sap.ui.model.json.JSONModel();
-            oMydata.loadData("sources/Data/cardManifests.json");
-            console.log(JSON.stringify(oMydata.getData()));
-            var oGrid = this.byId("grid1");
+        cardDataSource : {},
 
-            this.getView().setModel(oMydata, "manifests");
+        model : {},
 
-            oGrid.addDragDropConfig(new DragInfo({
-                sourceAggregation: "items"
-            }));
+        onInit : async function () {
+
+            this.model = new sap.ui.model.json.JSONModel()
+            await model.loadData("sources/Data/cardManifests.json");
+
+            this.cardDataSource = JSON.parse(model.getJSON());
+
+            this.loadFromDataSource(this.cardDataSource);
 
             oGrid.addDragDropConfig(new GridDropInfo({
                 targetAggregation: "items",
@@ -60,6 +61,13 @@ sap.ui.define([
                     oGrid.addStyleClass("sapUiSmallMargin");
                 }
             });
+        },
+
+        loadFromDataSource: function(dataSource) {
+
+            model.setData(dataSource);
+            this.getView().setModel(model);
+
         },
 
         onRevealGrid: function () {

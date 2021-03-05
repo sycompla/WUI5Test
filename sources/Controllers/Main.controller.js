@@ -3,15 +3,25 @@ sap.ui
         "sources.Controllers.Main",
         {
 
-            onInit : function () {
-                var oMydata = new sap.ui.model.json.JSONModel();
-                oMydata.loadData("sources/Data/data.json");
-                console.log(JSON.stringify(oMydata.getData()));
+            dataSource : {},
 
-                this.getView().setModel(oMydata);
+            originalTileDataSource : {},
 
+            model : {},
+
+            onInit : async function () {
+
+                model = new sap.ui.model.json.JSONModel()
+                await model.loadData("sources/Data/data.json");
+
+                this.dataSource = model.getData();
+
+                this.dataSource.companies =  Array.from(this.dataSource.companies);
+
+                model.setData(this.dataSource);
+                this.getView().setModel(model);
             },
-/*
+
             onTilePress : function(evt) {
                 app.to("idTile", "slide");},
 
@@ -21,11 +31,11 @@ sap.ui
             onGenericTilesPress : function (evt) {
                 app.to("idGenericTiles", "slide");
             },
-*/
+
             onMultiComboPress: function (evt) {
                 app.to("idMultiCombo", "slide");
             },
-/*
+
             onMasterPress: function (evt) {
                 app.to("idMaster", "slide");
             },
@@ -37,5 +47,5 @@ sap.ui
             },
             onGridContainerPress: function (evt) {
                 app.to("idGridContainer", "slide");
-            },*/
+            },
         });

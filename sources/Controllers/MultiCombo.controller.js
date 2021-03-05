@@ -2,7 +2,9 @@ sap.ui
     .controller(
         "sources.Controllers.MultiCombo",
         {
-            tileDateSource : {},
+            tileDataSource : {},
+
+            originalTileDataSource : {},
 
             model : {},
 
@@ -11,35 +13,30 @@ sap.ui
                 model = new sap.ui.model.json.JSONModel()
                 await model.loadData("sources/Data/TileCollectionWithMicroChart.json");
 
-                this.tileDataSource = JSON.parse(model.getJSON());
+                this.tileDataSource = model.getData();
 
-                this.loadFromDataSource(this.tileDataSource);
-            },
+                this.originalTileDataSource.TileCollection =  Array.from(this.tileDataSource.TileCollection);
 
-            loadFromDataSource: function(dataSource) {
-
-                model.setData(dataSource);
+                model.setData(this.tileDataSource);
                 this.getView().setModel(model);
 
             },
 
             filterDataSource: function(filter) {
 
-                let filteredDataSource=new Object();
-
                 if (filter.length>0) {
 
-                    filteredDataSource.TileCollection =
-                        Enumerable.from(this.tileDataSource.TileCollection)
+                    this.tileDataSource.TileCollection =
+                        Enumerable.from(this.originalTileDataSource.TileCollection)
                             .select(function (egyCsempe) { return egyCsempe})
                             .where(function (egyCsempe) {return egyCsempe.nodeName === filter[0].getText();})
                             .toArray();
 
-                    this.loadFromDataSource(filteredDataSource);
+                    model.setData(this.tileDataSource);
 
                 }
                 else
-                    this.loadFromDataSource(this.tileDataSource);
+                    model.setData(this.originalTileDataSource);
 
             },
 

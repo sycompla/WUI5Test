@@ -3,14 +3,27 @@ sap.ui
         "sources.Controllers.MicroChartInTile",
         {
 
-            onInit : function () {
-                var oMydata = new sap.ui.model.json.JSONModel();
-                oMydata.loadData("sources/Data/MicroChart.json");
-                console.log(JSON.stringify(oMydata.getData()));
+            chartDataSource : {},
 
-                this.getView().setModel(oMydata);
+            model : {},
+
+            onInit : async function () {
+
+                model = new sap.ui.model.json.JSONModel()
+                await model.loadData("sources/Data/MicroChart.json");
+
+                this.chartDataSource = JSON.parse(model.getJSON());
+
+                this.loadFromDataSource(this.chartDataSource);
             },
-/*
+
+            loadFromDataSource: function(dataSource) {
+
+                model.setData(dataSource);
+                this.getView().setModel(model);
+
+            },
+
             onTilePress : function(evt) {
-                app.to("idTile", "slide");},*/
+                app.to("idTile", "slide");},
         });
